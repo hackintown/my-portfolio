@@ -2,26 +2,29 @@ import React, { useState } from "react";
 import "../assets/styles.css";
 const Home = () => {
   const [activeSection, setActiveSection] = useState(1);
-
   // Function to handle menu item click
   const handleMenuClick = (sectionNmber) => {
     setActiveSection(sectionNmber);
   };
+  const [mobileToggle, setMobileToggle] = useState("false");
 
+  const handleMobileToggle = () => {
+    setMobileToggle(!mobileToggle);
+  };
   return (
     <main>
-      <aside className="sidebar">
+      <aside className={`sidebar ${mobileToggle ? "" : "active"}`}>
         <div className="sidebar-info">
           <figure className="avatar-box">
-            <img src="my-avatar.png" alt="Richard hanrick" width={80} />
+            <img src="my-avatar.png" alt="Manoj Mandal" width={80} />
           </figure>
           <div className="info-content">
-            <h1 className="name" title="Richard hanrick">
+            <h1 className="name" title="Manoj Mandal">
               Manoj Mandal
             </h1>
             <p className="title">Full Stack Developer</p>
           </div>
-          <button className="info_more-btn" data-sidebar-btn="">
+          <button className="info_more-btn" onClick={handleMobileToggle}>
             <span>Show Contacts</span>
             <ion-icon name="chevron-down" />
           </button>
@@ -83,14 +86,26 @@ const Home = () => {
               </a>
             </li>
             <li className="social-item">
-              <a href="#" className="social-link">
+              <a
+                href="https://www.instagram.com/mr_manoj_43"
+                target="_blank"
+                className="social-link"
+              >
                 <ion-icon name="logo-instagram" />
+              </a>
+            </li>
+            <li className="social-item">
+              <a
+                href="https://www.instagram.com/mr_manoj_43"
+                target="_blank"
+                className="social-link"
+              >
+                <ion-icon name="logo-linkedin" />
               </a>
             </li>
           </ul>
         </div>
       </aside>
-
       <div className="main-content">
         <nav className="navbar">
           <ul className="navbar-list">
@@ -111,7 +126,6 @@ const Home = () => {
             </li>
           </ul>
         </nav>
-
         <article className={`section ${activeSection === 1 ? "active" : ""}`}>
           <header>
             <h2 className="h2 article-title">About me</h2>
@@ -131,73 +145,150 @@ const Home = () => {
               famous brand companies.
             </p>
           </section>
-          {/*
-    - service
-  */}
           <section className="service">
             <h3 className="h3 service-title">What i'm doing</h3>
             <ul className="service-list">
               <li className="service-item">
-                <div className="service-icon-box">
-                  <img
-                    src="icon-design.svg
-          "
-                    alt="design icon"
-                    width={40}
-                  />
-                </div>
                 <div className="service-content-box">
-                  <h4 className="h4 service-item-title">Web design</h4>
-                  <p className="service-item-text">
-                    The most modern and high-quality design made at a
-                    professional level.
-                  </p>
+                  <h4 className="h4 service-item-title">
+                    Full Stack Development
+                  </h4>
+                  <div className="tech-icons-wrap">
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://i0.wp.com/softonitg.com/wp-content/uploads/2024/02/node-js-seeklogo-1.png?fit=836%2C512&ssl=1" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" />
+                    </div>
+                  </div>
+                  <ul className="bullet-points">
+                    <li className="service-item-text">
+                      Building Responsive Website Frontend Using React & it's UI
+                      library: MUI, Radix etc
+                    </li>
+                    <li className="service-item-text">
+                      Creating application backend in Node.js, Express.js &
+                      Database with MongoDB
+                    </li>
+                    <li className="service-item-text">
+                      Using JWT & Firebase For Authentications
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li className="service-item">
-                <div className="service-icon-box">
-                  <img
-                    src="icon-dev.svg"
-                    alt="Web development icon"
-                    width={40}
-                  />
-                </div>
                 <div className="service-content-box">
-                  <h4 className="h4 service-item-title">Web development</h4>
-                  <p className="service-item-text">
-                    High-quality development of sites at the professional level.
-                  </p>
+                  <h4 className="h4 service-item-title">Next.js Development</h4>
+                  <div className="tech-icons-wrap">
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://i0.wp.com/softonitg.com/wp-content/uploads/2024/02/node-js-seeklogo-1.png?fit=836%2C512&ssl=1" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=rHpveptSuwDz&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png" />
+                    </div>
+                  </div>
+                  <ul className="bullet-points">
+                    <li className="service-item-text">
+                      Creating modern, high-performance frontends with Next.js
+                    </li>
+                    <li className="service-item-text">
+                      Developing scalable backend services using Next.js API
+                      routes
+                    </li>
+                    <li className="service-item-text">
+                      Optimizing applications for SEO and performance
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li className="service-item">
-                <div className="service-icon-box">
-                  <img src="icon-app.svg" alt="mobile app icon" width={40} />
-                </div>
                 <div className="service-content-box">
-                  <h4 className="h4 service-item-title">Mobile apps</h4>
-                  <p className="service-item-text">
-                    Professional development of applications for iOS and
-                    Android.
-                  </p>
+                  <h4 className="h4 service-item-title">
+                    Mobile App Development
+                  </h4>
+                  <div className="tech-icons-wrap">
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=wPohyHO_qO1a&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=hmieDPifBlBM&format=png&color=000000" />
+                    </div>
+                  </div>
+                  <ul className="bullet-points">
+                    <li className="service-item-text">
+                      Building Responsive Website Frontend Using React & it's UI
+                      library: MUI, Radix etc
+                    </li>
+                    <li className="service-item-text">
+                      Creating application backend in Node.js, Express.js &
+                      Database with MongoDB
+                    </li>
+                    <li className="service-item-text">
+                      Using JWT & Firebase For Authentications
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li className="service-item">
-                <div className="service-icon-box">
-                  <img src="icon-photo.svg" alt="camera icon" width={40} />
-                </div>
                 <div className="service-content-box">
-                  <h4 className="h4 service-item-title">Photography</h4>
-                  <p className="service-item-text">
-                    I make high-quality photos of any category at a professional
-                    level.
-                  </p>
+                  <h4 className="h4 service-item-title">
+                    WordPress Development
+                  </h4>
+                  <div className="tech-icons-wrap">
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=13664&format=png&color=000000" />
+                    </div>
+                    <div className="tech-stack-icon">
+                      <img src="https://img.icons8.com/?size=100&id=BnOyV43gP7fZ&format=png&color=000000" />
+                    </div>
+                  </div>
+                  <ul className="bullet-points">
+                    <li className="service-item-text">
+                      Building Responsive Website Frontend Using React & it's UI
+                      library: MUI, Radix etc
+                    </li>
+                    <li className="service-item-text">
+                      Creating application backend in Node.js, Express.js &
+                      Database with MongoDB
+                    </li>
+                    <li className="service-item-text">
+                      Using JWT & Firebase For Authentications
+                    </li>
+                  </ul>
                 </div>
               </li>
             </ul>
           </section>
-          {/*
-    - testimonials
-  */}
           <section className="testimonials">
             <h3 className="h3 testimonials-title">Testimonials</h3>
             <ul className="testimonials-list has-scrollbar">
@@ -315,9 +406,6 @@ const Home = () => {
               </li>
             </ul>
           </section>
-          {/*
-    - testimonials modal
-  */}
           <div className="modal-container" data-modal-container="">
             <div className="overlay" data-overlay="" />
             <section className="testimonials-modal">
@@ -392,7 +480,6 @@ const Home = () => {
             </ul>
           </section>
         </article>
-
         <article className={`section ${activeSection === 2 ? "active" : ""}`}>
           <header>
             <h2 className="h2 article-title">Resume</h2>
@@ -407,34 +494,30 @@ const Home = () => {
             <ol className="timeline-list">
               <li className="timeline-item">
                 <h4 className="h4 timeline-item-title">
-                  University school of the arts
+                  Tula's Institute of Technology (Uttarakhand Technical
+                  University), Dehradun, India
                 </h4>
-                <span>2007 — 2008</span>
+                <span>2018 — 2022</span>
                 <p className="timeline-text">
-                  Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et quas molestias
-                  exceptur.
+                  Bacholr of Technology in Computer Science(B.Tech CSE)
                 </p>
               </li>
               <li className="timeline-item">
                 <h4 className="h4 timeline-item-title">
-                  New york academy of art
+                  N.K High School(BSEB), Dagmara, Bihar, India
                 </h4>
-                <span>2006 — 2007</span>
+                <span>2016 — 2018</span>
                 <p className="timeline-text">
-                  Ratione voluptatem sequi nesciunt, facere quisquams facere
-                  menda ossimus, omnis voluptas assumenda est omnis..
+                  Intermediate (12<sup>th</sup>)
                 </p>
               </li>
               <li className="timeline-item">
                 <h4 className="h4 timeline-item-title">
-                  High school of art and design
+                  N.K High School(BSEB), Dagmara, Bihar, India
                 </h4>
-                <span>2002 — 2004</span>
+                <span>2015 — 2016</span>
                 <p className="timeline-text">
-                  Duis aute irure dolor in reprehenderit in voluptate, quila
-                  voluptas mag odit aut fugit, sed consequuntur magni dolores
-                  eos.
+                  School (10<sup>th</sup>)
                 </p>
               </li>
             </ol>
@@ -448,7 +531,12 @@ const Home = () => {
             </div>
             <ol className="timeline-list">
               <li className="timeline-item">
-                <h4 className="h4 timeline-item-title">Creative director</h4>
+                <h4 className="h4 timeline-item-title">
+                  Software Development Engineer
+                </h4>
+                <p className="company-title">
+                  Unified Credit Solutions Pvt Ltd ~ Full Time
+                </p>
                 <span>2015 — Present</span>
                 <p className="timeline-text">
                   Nemo enim ipsam voluptatem blanditiis praesentium voluptum
@@ -457,7 +545,12 @@ const Home = () => {
                 </p>
               </li>
               <li className="timeline-item">
-                <h4 className="h4 timeline-item-title">Art director</h4>
+                <h4 className="h4 timeline-item-title">
+                  Software Development Engineer
+                </h4>
+                <p className="company-title">
+                  Eleserv Softech Pvt Ltd ~ Full Time
+                </p>
                 <span>2013 — 2015</span>
                 <p className="timeline-text">
                   Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
@@ -466,7 +559,10 @@ const Home = () => {
                 </p>
               </li>
               <li className="timeline-item">
-                <h4 className="h4 timeline-item-title">Web designer</h4>
+                <h4 className="h4 timeline-item-title">
+                  Software Development Engineer Intern
+                </h4>
+                <p className="company-title">Sparx IT Solutions Pvt Ltd ~ Internship</p>
                 <span>2010 — 2013</span>
                 <p className="timeline-text">
                   Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
@@ -530,7 +626,6 @@ const Home = () => {
             </ul>
           </section>
         </article>
-
         <article className={`section ${activeSection === 3 ? "active" : ""}`}>
           <header>
             <h2 className="h2 article-title">Portfolio</h2>
@@ -728,7 +823,6 @@ const Home = () => {
             </ul>
           </section>
         </article>
-
         <article className={`section ${activeSection === 4 ? "active" : ""}`}>
           <header>
             <h2 className="h2 article-title">Blog</h2>
@@ -884,7 +978,6 @@ const Home = () => {
             </ul>
           </section>
         </article>
-
         <article className={`section ${activeSection === 5 ? "active" : ""}`}>
           <header>
             <h2 className="h2 article-title">Contact</h2>
@@ -944,5 +1037,4 @@ const Home = () => {
     </main>
   );
 };
-
 export default Home;
