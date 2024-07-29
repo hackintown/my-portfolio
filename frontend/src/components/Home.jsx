@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "../assets/styles.css";
+import { submitContactForm } from "../features/contactSlice";
 const Home = () => {
+  const dispatch = useDispatch();
+  const { loading, error, success } = useSelector((state) => state.contact);
   const [activeSection, setActiveSection] = useState(1);
   // Function to handle menu item click
   const handleMenuClick = (sectionNmber) => {
@@ -16,6 +20,23 @@ const Home = () => {
 
   const handleFilterClick = (filterType) => {
     setFilterSelect(filterType);
+  };
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(submitContactForm(formData));
+    console.log(submitContactForm(formData));
   };
   return (
     <main>
@@ -1091,39 +1112,39 @@ const Home = () => {
           </section>
           <section className="contact-form">
             <h3 className="h3 form-title">Contact Form</h3>
-            <form action="#" className="form" data-form="">
+            {loading && <p>Loading...</p>}
+            {success && <p>Form submitted successfully!</p>}
+            {error && <p>Error: {error}</p>}
+            <form onSubmit={handleSubmit}>
               <div className="input-wrapper">
                 <input
                   type="text"
-                  name="fullname"
                   className="form-input"
                   placeholder="Full name"
-                  required=""
-                  data-form-input=""
+                  required
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
                 <input
                   type="email"
-                  name="email"
                   className="form-input"
                   placeholder="Email address"
-                  required=""
-                  data-form-input=""
+                  required
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
               <textarea
-                name="message"
                 className="form-input"
                 placeholder="Your Message"
-                required=""
-                data-form-input=""
-                defaultValue={""}
+                required
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
               />
-              <button
-                className="form-btn"
-                type="submit"
-                disabled=""
-                data-form-btn=""
-              >
+              <button className="form-btn" type="submit">
                 <ion-icon name="paper-plane" />
                 <span>Send Message</span>
               </button>
