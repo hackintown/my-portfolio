@@ -87,7 +87,7 @@ const Home = () => {
               </a>
             </li>
             <li className="social-item">
-              <a href="#" className="social-link">
+              <a href="https://x.com/hackintown" className="social-link">
                 <ion-icon name="logo-twitter" />
               </a>
             </li>
@@ -102,7 +102,7 @@ const Home = () => {
             </li>
             <li className="social-item">
               <a
-                href="https://www.instagram.com/mr_manoj_43"
+                href="https://www.linkedin.com/in/manojkumarmandal/"
                 target="_blank"
                 className="social-link"
               >
@@ -122,7 +122,7 @@ const Home = () => {
               <button className="navbar-link">Resume</button>
             </li>
             <li className="navbar-item" onClick={() => handleMenuClick(3)}>
-              <button className="navbar-link">Portfolio</button>
+              <button className="navbar-link">Projects</button>
             </li>
             <li className="navbar-item" onClick={() => handleMenuClick(4)}>
               <button className="navbar-link">Blog</button>
@@ -138,17 +138,18 @@ const Home = () => {
           </header>
           <section className="about-text">
             <p>
-              I'm Creative Director and UI/UX Designer from Sydney, Australia,
-              working in web development and print media. I enjoy turning
-              complex problems into simple, beautiful and intuitive designs.
+              I'm a MERN Stack and Next.js Developer from New Delhi, India,
+              specializing in web development. I enjoy transforming complex
+              problems into efficient, scalable, and user-friendly web
+              applications.
             </p>
             <p>
-              My job is to build your website so that it is functional and
-              user-friendly but at the same time attractive. Moreover, I add
-              personal touch to your product and make sure that is eye-catching
-              and easy to use. My aim is to bring across your message and
-              identity in the most creative way. I created web design for many
-              famous brand companies.
+              My job is to build your web applications with a focus on
+              functionality, performance, and user experience. I add a personal
+              touch to each project, ensuring it is both visually appealing and
+              easy to use. My aim is to effectively convey your message and
+              identity through innovative and creative web solutions. I have
+              developed web applications for many renowned companies.
             </p>
           </section>
           <section className="service">
@@ -246,15 +247,15 @@ const Home = () => {
                   </div>
                   <ul className="bullet-points">
                     <li className="service-item-text">
-                      Building Responsive Website Frontend Using React & it's UI
-                      library: MUI, Radix etc
+                      Building responsive mobile applications with React Native
+                      and Expo
                     </li>
                     <li className="service-item-text">
-                      Creating application backend in Node.js, Express.js &
-                      Database with MongoDB
+                      Creating and managing scalable backends for mobile apps
                     </li>
                     <li className="service-item-text">
-                      Using JWT & Firebase For Authentications
+                      Implementing secure authentication and user management in
+                      mobile apps
                     </li>
                   </ul>
                 </div>
@@ -280,15 +281,14 @@ const Home = () => {
                   </div>
                   <ul className="bullet-points">
                     <li className="service-item-text">
-                      Building Responsive Website Frontend Using React & it's UI
-                      library: MUI, Radix etc
+                      Building responsive websites with WordPress and Elementor
                     </li>
                     <li className="service-item-text">
-                      Creating application backend in Node.js, Express.js &
-                      Database with MongoDB
+                      Creating and managing scalable WordPress backends
                     </li>
                     <li className="service-item-text">
-                      Using JWT & Firebase For Authentications
+                      Implementing security and authentication with WordPress
+                      plugins
                     </li>
                   </ul>
                 </div>
@@ -447,9 +447,9 @@ const Home = () => {
               </div>
             </section>
           </div>
-          {/*
-    - clients
-  */}
+
+          {/* - clients */}
+
           <section className="clients">
             <h3 className="h3 clients-title">Clients</h3>
             <ul className="clients-list has-scrollbar">
@@ -652,9 +652,9 @@ const Home = () => {
               <li className="filter-item">
                 <button
                   data-filter-btn=""
-                  onClick={() => handleFilterClick("Web design")}
+                  onClick={() => handleFilterClick("Web development")}
                 >
-                  Web design
+                  Web development
                 </button>
               </li>
               <li className="filter-item">
@@ -663,14 +663,6 @@ const Home = () => {
                   onClick={() => handleFilterClick("Applications")}
                 >
                   Applications
-                </button>
-              </li>
-              <li className="filter-item">
-                <button
-                  data-filter-btn=""
-                  onClick={() => handleFilterClick("Web development")}
-                >
-                  Web development
                 </button>
               </li>
             </ul>
@@ -688,13 +680,10 @@ const Home = () => {
                   <button data-select-item="">All</button>
                 </li>
                 <li className="select-item">
-                  <button data-select-item="">Web design</button>
+                  <button data-select-item="">Web development</button>
                 </li>
                 <li className="select-item">
                   <button data-select-item="">Applications</button>
-                </li>
-                <li className="select-item">
-                  <button data-select-item="">Web development</button>
                 </li>
               </ul>
             </div>
@@ -708,13 +697,18 @@ const Home = () => {
                   >
                     <a href="#">
                       <figure className="project-img">
-                        <div className="project-item-icon-box">
+                        <a
+                          href="https://www.hackintown.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-item-icon-box"
+                        >
                           <ion-icon name="eye-outline" />
-                        </div>
+                        </a>
                         <img src="project-1.jpg" alt="finance" loading="lazy" />
                       </figure>
-                      <h3 className="project-title">Finance</h3>
-                      <p className="project-category">Web development</p>
+                      <h3 className="project-title">Hackintown</h3>
+                      <p className="project-category">Web Development</p>
                     </a>
                   </li>
                   <li
@@ -729,7 +723,7 @@ const Home = () => {
                         </div>
                         <img src="project-2.png" alt="orizon" loading="lazy" />
                       </figure>
-                      <h3 className="project-title">Orizon</h3>
+                      <h3 className="project-title">SMM Panel</h3>
                       <p className="project-category">Web development</p>
                     </a>
                   </li>
@@ -745,8 +739,8 @@ const Home = () => {
                         </div>
                         <img src="project-3.jpg" alt="fundo" loading="lazy" />
                       </figure>
-                      <h3 className="project-title">Fundo</h3>
-                      <p className="project-category">Web design</p>
+                      <h3 className="project-title">E-Commerce</h3>
+                      <p className="project-category">Web Development</p>
                     </a>
                   </li>
                   <li
@@ -765,8 +759,8 @@ const Home = () => {
                           loading="lazy"
                         />
                       </figure>
-                      <h3 className="project-title">Brawlhalla</h3>
-                      <p className="project-category">Applications</p>
+                      <h3 className="project-title">Curewells</h3>
+                      <p className="project-category">Web Development</p>
                     </a>
                   </li>
                   <li
@@ -781,8 +775,10 @@ const Home = () => {
                         </div>
                         <img src="project-5.png" alt="dsm." loading="lazy" />
                       </figure>
-                      <h3 className="project-title">DSM.</h3>
-                      <p className="project-category">Web design</p>
+                      <h3 className="project-title">Betting App</h3>
+                      <p className="project-category">
+                        IOS/Android Application
+                      </p>
                     </a>
                   </li>
                   <li
@@ -801,136 +797,8 @@ const Home = () => {
                           loading="lazy"
                         />
                       </figure>
-                      <h3 className="project-title">MetaSpark</h3>
+                      <h3 className="project-title">Quora Clone Features</h3>
                       <p className="project-category">Web design</p>
-                    </a>
-                  </li>
-                  <li
-                    className="project-item  active"
-                    data-filter-item=""
-                    data-category="web development"
-                  >
-                    <a href="#">
-                      <figure className="project-img">
-                        <div className="project-item-icon-box">
-                          <ion-icon name="eye-outline" />
-                        </div>
-                        <img src="project-7.png" alt="summary" loading="lazy" />
-                      </figure>
-                      <h3 className="project-title">Summary</h3>
-                      <p className="project-category">Web development</p>
-                    </a>
-                  </li>
-                  <li
-                    className="project-item  active"
-                    data-filter-item=""
-                    data-category="applications"
-                  >
-                    <a href="#">
-                      <figure className="project-img">
-                        <div className="project-item-icon-box">
-                          <ion-icon name="eye-outline" />
-                        </div>
-                        <img
-                          src="project-8.jpg"
-                          alt="task manager"
-                          loading="lazy"
-                        />
-                      </figure>
-                      <h3 className="project-title">Task Manager</h3>
-                      <p className="project-category">Applications</p>
-                    </a>
-                  </li>
-                  <li
-                    className="project-item  active"
-                    data-filter-item=""
-                    data-category="web development"
-                  >
-                    <a href="#">
-                      <figure className="project-img">
-                        <div className="project-item-icon-box">
-                          <ion-icon name="eye-outline" />
-                        </div>
-                        <img src="project-9.png" alt="arrival" loading="lazy" />
-                      </figure>
-                      <h3 className="project-title">Arrival</h3>
-                      <p className="project-category">Web development</p>
-                    </a>
-                  </li>
-                </>
-              )}
-              {filterSelect === "Web design" && (
-                <>
-                  <li
-                    className="project-item  active"
-                    data-filter-item=""
-                    data-category="applications"
-                  >
-                    <a href="#">
-                      <figure className="project-img">
-                        <div className="project-item-icon-box">
-                          <ion-icon name="eye-outline" />
-                        </div>
-                        <img
-                          src="project-8.jpg"
-                          alt="task manager"
-                          loading="lazy"
-                        />
-                      </figure>
-                      <h3 className="project-title">Task Manager</h3>
-                      <p className="project-category">Applications</p>
-                    </a>
-                  </li>
-                  <li
-                    className="project-item  active"
-                    data-filter-item=""
-                    data-category="web development"
-                  >
-                    <a href="#">
-                      <figure className="project-img">
-                        <div className="project-item-icon-box">
-                          <ion-icon name="eye-outline" />
-                        </div>
-                        <img src="project-9.png" alt="arrival" loading="lazy" />
-                      </figure>
-                      <h3 className="project-title">Arrival</h3>
-                      <p className="project-category">Web development</p>
-                    </a>
-                  </li>
-                </>
-              )}
-              {filterSelect === "Applications" && (
-                <>
-                  <li
-                    className="project-item  active"
-                    data-filter-item=""
-                    data-category="web development"
-                  >
-                    <a href="#">
-                      <figure className="project-img">
-                        <div className="project-item-icon-box">
-                          <ion-icon name="eye-outline" />
-                        </div>
-                        <img src="project-1.jpg" alt="finance" loading="lazy" />
-                      </figure>
-                      <h3 className="project-title">Finance</h3>
-                      <p className="project-category">Web development</p>
-                    </a>
-                  </li>
-                  <li
-                    className="project-item  active"
-                    data-filter-item=""
-                    data-category="web development"
-                  >
-                    <a href="#">
-                      <figure className="project-img">
-                        <div className="project-item-icon-box">
-                          <ion-icon name="eye-outline" />
-                        </div>
-                        <img src="project-2.png" alt="orizon" loading="lazy" />
-                      </figure>
-                      <h3 className="project-title">Orizon</h3>
-                      <p className="project-category">Web development</p>
                     </a>
                   </li>
                 </>
@@ -947,10 +815,104 @@ const Home = () => {
                         <div className="project-item-icon-box">
                           <ion-icon name="eye-outline" />
                         </div>
+                        <img src="project-1.jpg" alt="finance" loading="lazy" />
+                      </figure>
+                      <h3 className="project-title">Hackintown</h3>
+                      <p className="project-category">Web Development</p>
+                    </a>
+                  </li>
+                  <li
+                    className="project-item  active"
+                    data-filter-item=""
+                    data-category="web development"
+                  >
+                    <a href="#">
+                      <figure className="project-img">
+                        <div className="project-item-icon-box">
+                          <ion-icon name="eye-outline" />
+                        </div>
                         <img src="project-2.png" alt="orizon" loading="lazy" />
                       </figure>
-                      <h3 className="project-title">Orizon</h3>
+                      <h3 className="project-title">SMM Panel</h3>
                       <p className="project-category">Web development</p>
+                    </a>
+                  </li>
+                  <li
+                    className="project-item  active"
+                    data-filter-item=""
+                    data-category="web design"
+                  >
+                    <a href="#">
+                      <figure className="project-img">
+                        <div className="project-item-icon-box">
+                          <ion-icon name="eye-outline" />
+                        </div>
+                        <img src="project-3.jpg" alt="fundo" loading="lazy" />
+                      </figure>
+                      <h3 className="project-title">E-Commerce</h3>
+                      <p className="project-category">Web Development</p>
+                    </a>
+                  </li>
+                  <li
+                    className="project-item  active"
+                    data-filter-item=""
+                    data-category="applications"
+                  >
+                    <a href="#">
+                      <figure className="project-img">
+                        <div className="project-item-icon-box">
+                          <ion-icon name="eye-outline" />
+                        </div>
+                        <img
+                          src="project-4.png"
+                          alt="brawlhalla"
+                          loading="lazy"
+                        />
+                      </figure>
+                      <h3 className="project-title">Curewells</h3>
+                      <p className="project-category">Web Development</p>
+                    </a>
+                  </li>
+                  <li
+                    className="project-item  active"
+                    data-filter-item=""
+                    data-category="web design"
+                  >
+                    <a href="#">
+                      <figure className="project-img">
+                        <div className="project-item-icon-box">
+                          <ion-icon name="eye-outline" />
+                        </div>
+                        <img
+                          src="project-6.png"
+                          alt="metaspark"
+                          loading="lazy"
+                        />
+                      </figure>
+                      <h3 className="project-title">Quora Clone Features</h3>
+                      <p className="project-category">Web design</p>
+                    </a>
+                  </li>
+                </>
+              )}
+              {filterSelect === "Applications" && (
+                <>
+                  <li
+                    className="project-item  active"
+                    data-filter-item=""
+                    data-category="web design"
+                  >
+                    <a href="#">
+                      <figure className="project-img">
+                        <div className="project-item-icon-box">
+                          <ion-icon name="eye-outline" />
+                        </div>
+                        <img src="project-5.png" alt="dsm." loading="lazy" />
+                      </figure>
+                      <h3 className="project-title">Betting App</h3>
+                      <p className="project-category">
+                        IOS/Android Application
+                      </p>
                     </a>
                   </li>
                 </>
