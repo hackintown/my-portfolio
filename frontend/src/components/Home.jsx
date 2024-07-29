@@ -564,12 +564,12 @@ const Home = () => {
                 <p className="company-title">
                   Unified Credit Solutions Pvt Ltd ~ Full Time
                 </p>
-                <span>2015 — Present</span>
-                <p className="timeline-text">
+                <span>April 2023 – Present</span>
+                {/* <p className="timeline-text">
                   Nemo enim ipsam voluptatem blanditiis praesentium voluptum
                   delenit atque corrupti, quos dolores et qvuas molestias
                   exceptur.
-                </p>
+                </p> */}
               </li>
               <li className="timeline-item">
                 <h4 className="h4 timeline-item-title">
@@ -578,12 +578,12 @@ const Home = () => {
                 <p className="company-title">
                   Eleserv Softech Pvt Ltd ~ Full Time
                 </p>
-                <span>2013 — 2015</span>
-                <p className="timeline-text">
+                <span>Oct 2022 - July 2023</span>
+                {/* <p className="timeline-text">
                   Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
                   delenit atque corrupti, quos dolores et quas molestias
                   exceptur.
-                </p>
+                </p> */}
               </li>
               <li className="timeline-item">
                 <h4 className="h4 timeline-item-title">
@@ -592,65 +592,75 @@ const Home = () => {
                 <p className="company-title">
                   Sparx IT Solutions Pvt Ltd ~ Internship
                 </p>
-                <span>2010 — 2013</span>
-                <p className="timeline-text">
+                <span>Mar 2022 - Sep 2022</span>
+                {/* <p className="timeline-text">
                   Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
                   delenit atque corrupti, quos dolores et quas molestias
                   exceptur.
-                </p>
+                </p> */}
               </li>
             </ol>
           </section>
-          <section className="skill">
-            <h3 className="h3 skills-title">My skills</h3>
-            <ul className="skills-list content-card">
+          <section className="skills">
+            <h3 className="h3 skills-title">Technical Skills</h3>
+            <ul className="skills-list">
               <li className="skills-item">
-                <div className="title-wrapper">
-                  <h5 className="h5">Web design</h5>
-                  <data value={80}>80%</data>
+                <div className="skills-info">
+                  <h5 className="skills-category">Languages</h5>
+                  <span className="skills-percentage">90%</span>
                 </div>
-                <div className="skill-progress-bg">
-                  <div
-                    className="skill-progress-fill"
-                    style={{ width: "80%" }}
-                  />
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: "80%" }} />
                 </div>
+                <p className="skills-description">C, HTML/CSS, JavaScript</p>
               </li>
               <li className="skills-item">
-                <div className="title-wrapper">
-                  <h5 className="h5">Graphic design</h5>
-                  <data value={70}>70%</data>
+                <div className="skills-info">
+                  <h5 className="skills-category">Frameworks</h5>
+                  <span className="skills-percentage">80%</span>
                 </div>
-                <div className="skill-progress-bg">
-                  <div
-                    className="skill-progress-fill"
-                    style={{ width: "70%" }}
-                  />
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: "90%" }} />
                 </div>
+                <p className="skills-description">
+                  Bootstrap, Semantic UI, React.js, Next.js, Node.js, Express.js
+                </p>
               </li>
               <li className="skills-item">
-                <div className="title-wrapper">
-                  <h5 className="h5">Branding</h5>
-                  <data value={90}>90%</data>
+                <div className="skills-info">
+                  <h5 className="skills-category">Libraries</h5>
+                  <span className="skills-percentage">90%</span>
                 </div>
-                <div className="skill-progress-bg">
-                  <div
-                    className="skill-progress-fill"
-                    style={{ width: "90%" }}
-                  />
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: "90%" }} />
                 </div>
+                <p className="skills-description">
+                  Material UI, Radix UI, Redux Toolkit, React Router, Tailwind
+                  CSS, JWT
+                </p>
               </li>
               <li className="skills-item">
-                <div className="title-wrapper">
-                  <h5 className="h5">WordPress</h5>
-                  <data value={50}>50%</data>
+                <div className="skills-info">
+                  <h5 className="skills-category">Database</h5>
+                  <span className="skills-percentage">80%</span>
                 </div>
-                <div className="skill-progress-bg">
-                  <div
-                    className="skill-progress-fill"
-                    style={{ width: "50%" }}
-                  />
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: "50%" }} />
                 </div>
+                <p className="skills-description">SQL, MongoDB</p>
+              </li>
+              <li className="skills-item">
+                <div className="skills-info">
+                  <h5 className="skills-category">Developer Tools</h5>
+                  <span className="skills-percentage">90%</span>
+                </div>
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: "50%" }} />
+                </div>
+                <p className="skills-description">
+                  Git, Google Cloud Platform, VS Code, Visual Studio, Vercel,
+                  Netlify, Render
+                </p>
               </li>
             </ul>
           </section>
@@ -1113,7 +1123,11 @@ const Home = () => {
           <section className="contact-form">
             <h3 className="h3 form-title">Contact Form</h3>
             {loading && <p>Loading...</p>}
-            {success && <p>Form submitted successfully!</p>}
+            {success && (
+              <p style="color: chartreuse; margin: 4px 4px;font-weight: 500;">
+                Form submitted successfully!
+              </p>
+            )}
             {error && <p>Error: {error}</p>}
             <form onSubmit={handleSubmit}>
               <div className="input-wrapper">

@@ -683,7 +683,7 @@ main {
   gap: 15px;
   margin-bottom: 25px;
 }
-.company-title{
+.company-title {
   color: #fff;
 }
 .timeline-list {
@@ -732,37 +732,65 @@ main {
   line-height: 1.6;
 }
 /* Skills */
+.skills {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .skills-title {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
+
 .skills-list {
-  padding: 20px;
+  list-style: none;
+  padding: 0;
 }
-.skills-item:not(:last-child) {
-  margin-bottom: 15px;
+
+.skills-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-.skill .title-wrapper {
+
+.skills-info {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+
+.skills-category {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
-.skill-progress-bg {
-  background: var(--jet);
-  width: 100%;
+
+.skills-percentage {
+  font-size: 1rem;
+  color: #555;
+}
+
+.progress-bar {
+  position: relative;
   height: 8px;
-  border-radius: 10px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
 }
-.skill-progress-fill {
-  background: var(--text-gradient-yellow);
+
+.progress-fill {
   height: 100%;
-  border-radius: inherit;
+  background-color: #4caf50;
+  border-radius: 4px;
 }
+
+.skills-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
 /* Portfolio */
 .filter-list {
   display: none;
